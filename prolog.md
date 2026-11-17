@@ -52,9 +52,9 @@ entrelaza([H1|T1], [H2|T2], [H1,H2|T]) :- entrelaza(T1, T2, T).
 Definir la relación `'subtramo(?L1, ?L2)'` que se verifique si la lista **L1** es un subtramo ordenado listas **L2**. Por ejemplo, `subtramo([3, 4, 5], [1, 2, 3, 4, 5, 6])` debe dar `true`.
 
 ```prolog
-subtramo_aux([],_).
-subtramo_aux([X],[X|_]).
-subtramo_aux([X,Y|L1],[X,Y|L2]) :- subtramo_aux([Y|L1],[Y|L2]).
+subtramo([],_).
+subtramo([X],[X|_]).
+subtramo([X,Y|L1],[X,Y|L2]) :- subtramo_aux([Y|L1],[Y|L2]).
 ```
 
 ---

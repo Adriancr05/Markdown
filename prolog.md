@@ -94,11 +94,11 @@ invertir_acc([H|T], A, L) :- invertir_acc(T, [H|A], L).
 Definir la relación `'suma(+L,?X)'` y `'suma_acc(+L,?X)'` que se verifiquen si **X** es la suma de los elementos de la lista de números **L**. Ha de implementarse el primero sin acumulador y el segundo con. Por ejemplo, `suma([9, 3, 1, 5], X)` debe dar `X = 18`.
 
 ```prolog
-% Sin acumulador
+% sin acumulador
 suma([X], X).
 suma([H|T], X) :- suma(T, XT), X is H + XT.
 
-% Con acumulador
+% con acumulador
 suma_acc(L, X) :- suma_acc_aux(L, 0, X).
 suma_acc_aux([], A, A).
 suma_acc_aux([H|T], A, X) :- A1 is A + H, suma_acc(T, A1, X).

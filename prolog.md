@@ -55,6 +55,7 @@ Definir la relación `'subtramo(?L1, ?L2)'` que se verifique si la lista **L1
 subtramo([],_).
 subtramo([X],[X|_]).
 subtramo([X,Y|L1],[X,Y|L2]) :- subtramo_aux([Y|L1],[Y|L2]).
+subtramo(L1, [_|L2]) :- subtramo(L1, L2).
 ```
 
 ---
